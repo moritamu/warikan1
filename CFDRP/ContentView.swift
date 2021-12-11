@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var total = "1010"
+    @State private var total = "12"
     @State private var ninzu = 2
     @State private var kingaku = 0
     @State private var hasu = 0
@@ -18,23 +18,24 @@ struct ContentView: View {
     
     var body: some View {
         VStack{
-            Text("割り勘くん")
+            Text("ドリップくん")
                 .font(.largeTitle)
             HStack{
-                Text("金額：　")
+                Text("豆の重さ：　")
                 TextField("000", text: $total)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .keyboardType(.numberPad)
-                Text("円")
+                Text("ｇ")
             }
-            Stepper(value: $ninzu, in: 2...10){
-                Text("人数： \(ninzu)人")
-            }
+//            Stepper(value: $ninzu, in: 2...10){
+//                Text("人数： \(ninzu)人")
+//            }
             HStack{
-                Text("単位：　")
+                Text("濃さ：　")
                 Picker(selection: $unit, label: Text("最小支払額")){
-                    Text("１０円").tag(10)
-                    Text("１００円").tag(100)
+                    Text("普通").tag(6)
+                    Text("やや濃い").tag(7)
+                    Text("濃い").tag(8)
                     
                 }
                 .pickerStyle(SegmentedPickerStyle())
@@ -56,7 +57,7 @@ struct ContentView: View {
                 Text("端数： \(hasu)円")
             }
             Rectangle()
-                .foregroundColor(.yellow)
+                .foregroundColor(.blue)
                 .onTapGesture {
                     UIApplication.shared
                         .sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
@@ -64,7 +65,7 @@ struct ContentView: View {
             
         }
         .font(.title)
-        .background(Color.orange)
+        .background(Color.yellow)
     }
     func calc() {
         if let totalInt = Int(total) {
