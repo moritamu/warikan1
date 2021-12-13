@@ -12,7 +12,7 @@ struct ContentView: View {
     @State private var ninzu = 2
     @State private var kingaku = 0
     @State private var hasu = 0
-    @State private var unit = 10
+    @State private var unit = 6
     @State private var inputError = false
     @State private var msg = ""
     
@@ -32,11 +32,11 @@ struct ContentView: View {
 //            }
             HStack{
                 Text("濃さ：　")
-                Picker(selection: $unit, label: Text("最小支払額")){
+                Picker(selection: $unit, label: Text("入れ方")){
                     Text("普通").tag(6)
                     Text("やや濃い").tag(7)
                     Text("濃い").tag(8)
-                    
+//                    ここのunitがわからないPicker?
                 }
                 .pickerStyle(SegmentedPickerStyle())
             }
@@ -53,8 +53,9 @@ struct ContentView: View {
                 Alert(title: Text("入力エラー"), message: Text(self.msg), dismissButton: .default(Text("OK")))
             }
             if kingaku != 0{
-                Text("一人あたりの金額： \(kingaku)円")
-                Text("端数： \(hasu)円")
+                Text("最初は： \(kingaku)ｇまで")
+                Text("次は： \(kingaku * 2)ｇまで")
+                Text("最後は：\(kingaku * 5)ｇまで入れる")
             }
             Rectangle()
                 .foregroundColor(.blue)
@@ -69,9 +70,10 @@ struct ContentView: View {
     }
     func calc() {
         if let totalInt = Int(total) {
-            let kingakuReal = totalInt / ninzu
-            kingaku = kingakuReal / unit * unit
-            hasu = totalInt - kingaku * ninzu
+            let kingakuReal = (totalInt / unit) * 100
+            kingaku = kingakuReal / 5
+//            小数の掛け算ができない
+            hasu = kingaku
             if kingaku == 0 {
                 msg = "\(unit * ninzu)円以上の金額を入力してください"
                 inputError = true
