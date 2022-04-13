@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var total = "12"
     @State private var ninzu = 2
-    @State private var kingaku:Float = 0
+    @State private var omosa:Float = 0
     @State private var hasu = 0
     @State private var unit:Int = 6
     @State private var inputError = false
@@ -52,10 +52,10 @@ struct ContentView: View {
             .alert(isPresented: $inputError) {
                 Alert(title: Text("入力エラー"), message: Text(self.msg), dismissButton: .default(Text("OK")))
             }
-            if kingaku != 0{
-                Text("最初は： " + String(format: "%.1f" , kingaku) + "ｇまで")
-                Text("次は： " + String(format: "%.1f" , kingaku * 2) + "ｇまで")
-                Text("最後は：" + String(format: "%.1f" , kingaku * 5) + "ｇまで入れる")
+            if omosa != 0{
+                Text("最初は： " + String(format: "%.1f" , omosa) + "ｇまで")
+                Text("次は： " + String(format: "%.1f" , omosa * 2) + "ｇまで")
+                Text("最後は：" + String(format: "%.1f" , omosa * 5) + "ｇまで入れる")
             }
             Rectangle()
                 .foregroundColor(.blue)
@@ -72,10 +72,10 @@ struct ContentView: View {
         if let totalF = Float(total) {
             let unitF = Float(unit)
             let kingakuReal = (totalF / unitF) * 100
-            kingaku = kingakuReal / 5
+            omosa = kingakuReal / 5
 //            小数の掛け算ができない
-            hasu = Int(kingaku)
-            if kingaku == 0 {
+            hasu = Int(omosa)
+            if omosa == 0 {
 //                msg = "\(unit * ninzu)円以上の金額を入力してください"
                 inputError = true
             }
