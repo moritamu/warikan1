@@ -46,8 +46,8 @@ struct ContentView: View {
                 Text("計算")
                     .foregroundColor(.white)
                     .background(Capsule()
-                                    .foregroundColor(.purple))
-                    .frame(width: 120, height: 50)
+                        .foregroundColor(.pink))
+                    .frame(width: 180, height: 50)
             }
             .alert(isPresented: $inputError) {
                 Alert(title: Text("入力エラー"), message: Text(self.msg), dismissButton: .default(Text("OK")))
@@ -58,12 +58,12 @@ struct ContentView: View {
                 Text("最後は：" + String(format: "%.1f" , omosa * 5) + "ｇまで入れる")
             }
             Rectangle()
-                .foregroundColor(.blue)
+                .foregroundColor(Color.brown)
                 .onTapGesture {
                     UIApplication.shared
                         .sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                 }
-            
+        Text("momoo")
         }
         .font(.title)
         .background(Color.yellow)
