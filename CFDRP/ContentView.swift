@@ -27,16 +27,16 @@ struct ContentView: View {
                     .keyboardType(.numberPad)
                 Text("ｇ")
             }
-//            Stepper(value: $ninzu, in: 2...10){
-//                Text("人数： \(ninzu)人")
-//            }
+            //            Stepper(value: $ninzu, in: 2...10){
+            //                Text("人数： \(ninzu)人")
+            //            }
             HStack{
                 Text("濃さ：　")
                 Picker(selection: $unit, label: Text("入れ方")){
                     Text("普通").tag(6)
                     Text("やや濃い").tag(7)
                     Text("濃い").tag(8)
-//                    ここのunitがわからないPicker?
+                    //                    ここのunitがわからないPicker?
                 }
                 .pickerStyle(SegmentedPickerStyle())
             }
@@ -45,9 +45,13 @@ struct ContentView: View {
             }) {
                 Text("計算")
                     .foregroundColor(.white)
-                    .background(Capsule()
-                        .foregroundColor(.pink))
                     .frame(width: 180, height: 50)
+                    .background(Capsule()
+                    )
+                    .colorMultiply(/*@START_MENU_TOKEN@*/Color.pink/*@END_MENU_TOKEN@*/)
+                
+                
+                
             }
             .alert(isPresented: $inputError) {
                 Alert(title: Text("入力エラー"), message: Text(self.msg), dismissButton: .default(Text("OK")))
@@ -58,25 +62,27 @@ struct ContentView: View {
                 Text("最後は：" + String(format: "%.1f" , omosa * 5) + "ｇまで入れる")
             }
             Rectangle()
-                .foregroundColor(Color.brown)
+                .foregroundColor(Color(red: 0.2, green: 0.3, blue: 0.6, opacity: 0.1))
                 .onTapGesture {
                     UIApplication.shared
                         .sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                 }
-        Text("momoo")
+            Text("おいしいコーヒーをいれましょう！")
+                .font(.title3)
+                .foregroundColor(.white)
         }
         .font(.title)
-        .background(Color.yellow)
+        .background(Color(red: 0.2, green: 0.3, blue: 0.6, opacity: 0.3))
     }
     func calc() {
         if let totalF = Float(total) {
             let unitF = Float(unit)
             let kingakuReal = (totalF / unitF) * 100
             omosa = kingakuReal / 5
-//            小数の掛け算ができない
+            //            小数の掛け算ができない
             hasu = Int(omosa)
             if omosa == 0 {
-//                msg = "\(unit * ninzu)円以上の金額を入力してください"
+                //                msg = "\(unit * ninzu)円以上の金額を入力してください"
                 inputError = true
             }
         } else {
