@@ -15,6 +15,7 @@ struct ContentView: View {
     @State private var unit:Int = 6//出来上がりコーヒー100gあたりの豆の重さ
     @State private var inputError = false//アラート表示のためのフラグ
     @State private var msg = ""
+    let soundPlayer = SoundPlayer()
     
     var body: some View {
         VStack{
@@ -42,6 +43,7 @@ struct ContentView: View {
             }
             Button(action: {
                 calc()
+                soundPlayer.cymbalPlay()
             }) {
                 Text("計算")
                     .foregroundColor(.white)
