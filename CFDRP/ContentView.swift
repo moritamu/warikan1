@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var total = "12"
-    @State private var ninzu = 2
+    @State private var total = "12"//豆の量
+    @State private var ninzu = 2//使ってない
     @State private var omosa:Float = 0
-    @State private var hasu = 0
-    @State private var unit:Int = 6
-    @State private var inputError = false
+    @State private var hasu = 0//使ってない
+    @State private var unit:Int = 6//出来上がりコーヒー100gあたりの豆の重さ
+    @State private var inputError = false//アラート表示のためのフラグ
     @State private var msg = ""
     
     var body: some View {
@@ -53,6 +53,7 @@ struct ContentView: View {
                 
                 
             }
+            //inputErrorでアラートを表示する
             .alert(isPresented: $inputError) {
                 Alert(title: Text("入力エラー"), message: Text(self.msg), dismissButton: .default(Text("OK")))
             }
