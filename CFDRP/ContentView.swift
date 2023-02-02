@@ -41,41 +41,51 @@ struct ContentView: View {
                 }
                 .pickerStyle(SegmentedPickerStyle())
             }
+            .padding(.vertical)
             Button(action: {
                 calc()
                 soundPlayer.cymbalPlay()
             }) {
-                Text("計算")
+                Text("お湯の注ぎ方")
                     .foregroundColor(.white)
-                    .frame(width: 180, height: 50)
+                    .frame(width: 300, height: 50)
                     .background(Capsule()
                     )
-                    .colorMultiply(/*@START_MENU_TOKEN@*/Color.pink/*@END_MENU_TOKEN@*/)
+                    .colorMultiply(Color.white)
                 
                 
                 
             }
+                .padding(.vertical)
             //inputErrorでアラートを表示する
             .alert(isPresented: $inputError) {
                 Alert(title: Text("入力エラー"), message: Text(self.msg), dismissButton: .default(Text("OK")))
             }
             if omosa != 0{
+                Spacer()
+                Text("３回に分けます。")
+                Spacer()
                 Text("最初は： " + String(format: "%.1f" , omosa) + "ｇまで")
+                Spacer()
                 Text("次は： " + String(format: "%.1f" , omosa * 2) + "ｇまで")
+                Spacer()
                 Text("最後は：" + String(format: "%.1f" , omosa * 5) + "ｇまで入れる")
+                Spacer()
             }
-            Rectangle()
-                .foregroundColor(Color(red: 0.2, green: 0.3, blue: 0.6, opacity: 0.1))
-                .onTapGesture {
-                    UIApplication.shared
-                        .sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-                }
+            Spacer()
+//            Rectangle()
+//                .foregroundColor(Color(red: 0.2, green: 0.3, blue: 0.6, opacity: 0.1))
+//                .onTapGesture {
+//                    UIApplication.shared
+//                        .sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+//                }
             Text("おいしいコーヒーをいれましょう！")
                 .font(.title3)
                 .foregroundColor(.white)
         }
+        .padding(.vertical)
         .font(.title)
-        .background(Color(red: 0.2, green: 0.3, blue: 0.6, opacity: 0.3))
+        .background(Color(red: 0.2, green: 0.4, blue: 0.9, opacity: 0.4))
     }
     func calc() {
         if let totalF = Float(total) {
