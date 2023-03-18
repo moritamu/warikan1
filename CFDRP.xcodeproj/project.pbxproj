@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0EEA0E79276092C100668614 /* warikan1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEA0E78276092C100668614 /* warikan1App.swift */; };
+		0EBC0ADA276F8899009949BE /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBC0AD9276F8899009949BE /* SoundPlayer.swift */; };
+		0EEA0E79276092C100668614 /* CFDRPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEA0E78276092C100668614 /* CFDRPApp.swift */; };
 		0EEA0E7B276092C100668614 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEA0E7A276092C100668614 /* ContentView.swift */; };
 		0EEA0E7D276092C300668614 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EEA0E7C276092C300668614 /* Assets.xcassets */; };
 		0EEA0E80276092C300668614 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EEA0E7F276092C300668614 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0EEA0E75276092C100668614 /* warikan1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = warikan1.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0EEA0E78276092C100668614 /* warikan1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = warikan1App.swift; sourceTree = "<group>"; };
+		0EBC0AD9276F8899009949BE /* SoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
+		0EEA0E75276092C100668614 /* CFDRP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CFDRP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EEA0E78276092C100668614 /* CFDRPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CFDRPApp.swift; sourceTree = "<group>"; };
 		0EEA0E7A276092C100668614 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0EEA0E7C276092C300668614 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0EEA0E7F276092C300668614 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -35,7 +37,7 @@
 		0EEA0E6C276092C100668614 = {
 			isa = PBXGroup;
 			children = (
-				0EEA0E77276092C100668614 /* warikan1 */,
+				0EEA0E77276092C100668614 /* CFDRP */,
 				0EEA0E76276092C100668614 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,20 +45,21 @@
 		0EEA0E76276092C100668614 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0EEA0E75276092C100668614 /* warikan1.app */,
+				0EEA0E75276092C100668614 /* CFDRP.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0EEA0E77276092C100668614 /* warikan1 */ = {
+		0EEA0E77276092C100668614 /* CFDRP */ = {
 			isa = PBXGroup;
 			children = (
-				0EEA0E78276092C100668614 /* warikan1App.swift */,
+				0EEA0E78276092C100668614 /* CFDRPApp.swift */,
 				0EEA0E7A276092C100668614 /* ContentView.swift */,
+				0EBC0AD9276F8899009949BE /* SoundPlayer.swift */,
 				0EEA0E7C276092C300668614 /* Assets.xcassets */,
 				0EEA0E7E276092C300668614 /* Preview Content */,
 			);
-			path = warikan1;
+			path = CFDRP;
 			sourceTree = "<group>";
 		};
 		0EEA0E7E276092C300668614 /* Preview Content */ = {
@@ -70,9 +73,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0EEA0E74276092C100668614 /* warikan1 */ = {
+		0EEA0E74276092C100668614 /* CFDRP */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0EEA0E83276092C300668614 /* Build configuration list for PBXNativeTarget "warikan1" */;
+			buildConfigurationList = 0EEA0E83276092C300668614 /* Build configuration list for PBXNativeTarget "CFDRP" */;
 			buildPhases = (
 				0EEA0E71276092C100668614 /* Sources */,
 				0EEA0E72276092C100668614 /* Frameworks */,
@@ -82,9 +85,9 @@
 			);
 			dependencies = (
 			);
-			name = warikan1;
-			productName = warikan1;
-			productReference = 0EEA0E75276092C100668614 /* warikan1.app */;
+			name = CFDRP;
+			productName = CFDRP;
+			productReference = 0EEA0E75276092C100668614 /* CFDRP.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +105,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0EEA0E70276092C100668614 /* Build configuration list for PBXProject "warikan1" */;
+			buildConfigurationList = 0EEA0E70276092C100668614 /* Build configuration list for PBXProject "CFDRP" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +118,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0EEA0E74276092C100668614 /* warikan1 */,
+				0EEA0E74276092C100668614 /* CFDRP */,
 			);
 		};
 /* End PBXProject section */
@@ -138,7 +141,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EEA0E7B276092C100668614 /* ContentView.swift in Sources */,
-				0EEA0E79276092C100668614 /* warikan1App.swift in Sources */,
+				0EBC0ADA276F8899009949BE /* SoundPlayer.swift in Sources */,
+				0EEA0E79276092C100668614 /* CFDRPApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +272,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"warikan1/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CFDRP/Preview Content\"";
 				DEVELOPMENT_TEAM = YKP3867T9W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -282,7 +286,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = jp.ne.sannet.moris.warikan1;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.ne.sannet.moris.CFDRP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -297,7 +301,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"warikan1/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CFDRP/Preview Content\"";
 				DEVELOPMENT_TEAM = YKP3867T9W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -311,7 +315,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = jp.ne.sannet.moris.warikan1;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.ne.sannet.moris.CFDRP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -322,7 +326,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0EEA0E70276092C100668614 /* Build configuration list for PBXProject "warikan1" */ = {
+		0EEA0E70276092C100668614 /* Build configuration list for PBXProject "CFDRP" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0EEA0E81276092C300668614 /* Debug */,
@@ -331,7 +335,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0EEA0E83276092C300668614 /* Build configuration list for PBXNativeTarget "warikan1" */ = {
+		0EEA0E83276092C300668614 /* Build configuration list for PBXNativeTarget "CFDRP" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0EEA0E84276092C300668614 /* Debug */,
